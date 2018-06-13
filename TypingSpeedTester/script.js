@@ -64,9 +64,12 @@ function startTimer(){
 
 // Reset everything:
 function resetTimer(){
+  clear(interval);
+  interval = null;
   theTimer.innerHTML = '00:00:00';
   testArea.value = "";
   timer = [0,0,0];
+  isTimerRunning = false;
   testWrapper.style.borderColor = "grey";
 }
 
